@@ -1,3 +1,8 @@
-from django.shortcuts import render
+import json
+from django.http import JsonResponse
 
-# Create your views here.
+def api_home(request, *args, **kwargs):
+    #request.body
+    #request -> HttpRequest -> django
+    print(request.GET)
+    return JsonResponse({"message": "Hello, monkey!"})
